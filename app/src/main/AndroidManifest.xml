@@ -7,6 +7,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
 
     <application
         android:allowBackup="true"
@@ -37,8 +41,11 @@
         </service>
 
 
-        <meta-data android:name="com.here.android.maps.appid" android:value="ZANXRcqUNCgyPAjWSmSS"/>
-        <meta-data android:name="com.here.android.maps.apptoken" android:value="czz2OUCn2GK6ZF0D13-VIQ"/>
+        <meta-data android:name="com.here.android.maps.appid" android:value="oLKBdEUOy4G1Qpn29NN4"/>
+        <meta-data android:name="com.here.android.maps.apptoken" android:value="FqS_KxPpDSOM2Gv8XMuVRw"/>
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="RE00vsEk9IzT93cBIcb+4mS2IXCh9Yf5tXQXkkJC03zLB/uuP/40WgXzwtAbYISmVH2aHDVva8hrPYsmn5RWv3Udnluf0EKVfiL5ZdwZuN3djoXEsxP89gMdu4d2SD7wbiFunezdTGxr0odDWmY/0exUMS/gWRuvI/CDrt9gweoe6tH9Q7fJZZTz1uX1sLS7xYL1P/k5uZKhFaI65X8v9B7lcHljjFSew2g0kdB5VpABRhKkizIGTfMMMEvKNb8gSAFeyilO3WjD1usn4IQrHZVwVN/fz2EaCk9BVjnSjVkBLnRwCfliJFQST+GgTHisCSJtLCUEZYNUfc9qShtIaRiSFs3/bcrRVKSl0+Qh6JHKUT27uZ0+8mpMwFkqdSkiDyhUl76XmXH5ZGKLXUyrv0T9IsAUlRFj3AQ6BmDe5hCt1ZaRAjVG5pfO3+tkeIIqXVlR9Oqv175KCh17w+t5LMg0Om7syKzT6tKA5CiP7x0C9goSynKiKMjvaqGsE3SMp3bssmYyeFWeh7TV6RWnx5YKdzUC5ePsQ++qT8UkEhrx78Tn2F1M51h/eyGkHIsn/nHAnYd3q7Mv1GVfm2ZYm9fmjKLRwAksSy4LNlarAR63mkCvaofhrLDWFHyZV8A/19kOUgNzXWBGYq5Tx2SbdmLObc84MvnpWD24IkruSh4=" />
     </application>
 
 </manifest>
