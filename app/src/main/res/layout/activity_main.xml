@@ -5,18 +5,26 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
     <!-- UI element declaration for "Get Directions" button -->
-    <android.widget.Button
-        android:id="@+id/directionsbutton"
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/label_button_getdirections"
-        android:onClick="getDirections" />
+        android:id="@+id/placeEditText" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textview_routecoordinates_2waypoints"
         tools:context=".MainActivity" />
+
+    <android.widget.Button
+        android:id="@+id/directionsbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_button_getdirections"
+        android:onClick="getDirections" />
+
     <fragment
         class="com.here.android.mpa.mapping.MapFragment"
         android:id="@+id/mapfragment"
