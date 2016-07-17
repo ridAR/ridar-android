@@ -47,6 +47,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Method;
+import java.net.URLEncoder;
 import java.util.List;
 import java.util.UUID;
 
@@ -166,7 +167,6 @@ public class MainActivity extends AppCompatActivity {
         //   A MAC address, which we got above.
         //   A Service ID or UUID.  In this case we are using the
         //     UUID for SPP.
-
         try {
             btSocket = createBluetoothSocket(device);
         } catch (IOException e1) {
@@ -367,7 +367,7 @@ public class MainActivity extends AppCompatActivity {
                     sendBluetoothSignal(LEDTOBLINK);
                     StateBlink = false;
                     StateSolid = true;
-                } else if (EDA < 200 && StateBlink == false) {
+                } else if (EDA < 100 && StateBlink == false) {
                     //BLINK
                     Log.d("DBGRIDAR:", "SIGNALBLINK - " + LEDTOBLINK);
                     sendBluetoothSignal(LEDTOBLINK);
@@ -462,7 +462,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private JsonObjectRequest getJsonObjectRequest(String place) {
-        String placeUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + place + "&key=AIzaSyD-9JcB-zqw7hlQ8NE4Th07y-c1Sm6BAIE";
+        String placeUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + URLEncoder.encode(place) + "&key=AIzaSyD-9JcB-zqw7hlQ8NE4Th07y-c1Sm6BAIE";
         return new JsonObjectRequest(placeUrl, null,
                 new Response.Listener<JSONObject>() {
                     @Override
