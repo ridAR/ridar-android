@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ridar.akhilraj.ridar" >
+    package="com.techgeekme.ridar">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -16,15 +16,15 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:hardwareAccelerated="true">
+        android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.techgeekme.ridar.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,21 +33,24 @@
         </activity>
         <service
             android:name="com.here.android.mpa.service.MapService"
+            android:exported="true"
             android:label="HereMapService"
-            android:process="global.Here.Map.Service.v2"
-            android:exported="true" >
+            android:process="global.Here.Map.Service.v2">
             <intent-filter>
-                <action android:name="com.here.android.mpa.service.MapService" >
-                </action>
+                <action android:name="com.here.android.mpa.service.MapService"></action>
             </intent-filter>
         </service>
 
 
-        <meta-data android:name="com.here.android.maps.appid" android:value="oLKBdEUOy4G1Qpn29NN4"/>
-        <meta-data android:name="com.here.android.maps.apptoken" android:value="FqS_KxPpDSOM2Gv8XMuVRw"/>
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="XOXMFl7BYXxXmasM1Hhx" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="sK27jaiAPbBq6U67IyncfA" />
         <meta-data
             android:name="com.here.android.maps.license.key"
-            android:value="RE00vsEk9IzT93cBIcb+4mS2IXCh9Yf5tXQXkkJC03zLB/uuP/40WgXzwtAbYISmVH2aHDVva8hrPYsmn5RWv3Udnluf0EKVfiL5ZdwZuN3djoXEsxP89gMdu4d2SD7wbiFunezdTGxr0odDWmY/0exUMS/gWRuvI/CDrt9gweoe6tH9Q7fJZZTz1uX1sLS7xYL1P/k5uZKhFaI65X8v9B7lcHljjFSew2g0kdB5VpABRhKkizIGTfMMMEvKNb8gSAFeyilO3WjD1usn4IQrHZVwVN/fz2EaCk9BVjnSjVkBLnRwCfliJFQST+GgTHisCSJtLCUEZYNUfc9qShtIaRiSFs3/bcrRVKSl0+Qh6JHKUT27uZ0+8mpMwFkqdSkiDyhUl76XmXH5ZGKLXUyrv0T9IsAUlRFj3AQ6BmDe5hCt1ZaRAjVG5pfO3+tkeIIqXVlR9Oqv175KCh17w+t5LMg0Om7syKzT6tKA5CiP7x0C9goSynKiKMjvaqGsE3SMp3bssmYyeFWeh7TV6RWnx5YKdzUC5ePsQ++qT8UkEhrx78Tn2F1M51h/eyGkHIsn/nHAnYd3q7Mv1GVfm2ZYm9fmjKLRwAksSy4LNlarAR63mkCvaofhrLDWFHyZV8A/19kOUgNzXWBGYq5Tx2SbdmLObc84MvnpWD24IkruSh4=" />
+            android:value="O8BcBUU+oeMbiGreNHzSmyyZSewJmIjNNMifafSWWvBxfo2EEsseeYIQH5ZU/cBdiYEzltmF9RHf6ZMz4aox9qP8pg/ed+eVoFZHuIk6VQrL6PH9uqekDOaNNgpa8FbJTBv9L+5LyN0m+Tigywn9qRZt/zH9UWTfm2dk5lIGs+uF0EyfXFScTmBAjrDRATKd6YnfH2nV4NH1sRKWFeJaWXrriprKzfhP4xfr5lbKEbv9vF5Fo9nUm2r/shOwokag5q2RVx60f+d1FpSPiz8XuQmjm/vY9x24KTw8DUAd1qHRIWcXA05hJs0WljyNsvVtgsfMppbmA0RmeeAZVxUC5D8SZZRKuZa2BcRDqOJ6fwm9inRCHyNYgY89NBQeoLXMc+/Ih/cT7UsSlUQMHZM+eCwWYDvnd4Pl92n7Mg7/G5a4SC3JhsXCpa20ru6yx3bXUmefO2BSrtyzyiFpBcqfl+r7Z2heae44dD6WCcFa0XluIn6rNg/N5F+w2x3ZMT5jrZDaw6j5yywJZFpAZ5WpKXC2MOTx4llE9c4ciZvC9erNOJJ+hTnyAQdQLtN/wFPzmR1sBfrsXZEoV1bkyrS22UeCENWKNJ/X2GYbPi/CskQmzwUrj2RDgDoH0gSxj7QaF1ROEuZMV4eHfkCWHEyhMdE2F0C9HOiTGDCjco4Rd40=" />
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.0 rc3"
 
     defaultConfig {
-        applicationId "com.ridar.akhilraj.ridar"
+        applicationId "com.techgeekme.ridar"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -25,6 +25,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
     compile 'com.android.volley:volley:1.0.0'
-    compile files('libs/HERE-sdk.jar')
-    compile files('libs/HERE-sdk-javadoc.jar')
+    compile project(':HERE-sdk')
+    compile 'com.google.code.gson:gson:2.8.0'
 }
