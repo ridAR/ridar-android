@@ -1,34 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-    <!-- UI element declaration for "Get Directions" button -->
 
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/placeEditText" />
+
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/textview_routecoordinates_2waypoints"
+        android:text="Select Helmet"
+        android:layout_gravity="center"
+        android:textSize="32dp"
         tools:context=".MainActivity" />
 
-    <android.widget.Button
-        android:id="@+id/directionsbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_button_getdirections"
-        android:onClick="getDirections" />
 
-    <fragment
-        class="com.here.android.mpa.mapping.MapFragment"
-        android:id="@+id/mapfragment"
+    <ListView
+        android:id="@+id/listview_devices"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/listview_layout_margin" />
 
 </LinearLayout>

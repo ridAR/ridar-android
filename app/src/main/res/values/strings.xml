@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">RidAr</string>
-    <string name="action_settings">Settings</string>
-    <string name="label_button_getdirections">Get Directions</string>
-    <string name="textview_routecoordinates_2waypoints">Press "Get Directions" button to calculate a route:\nStart: BLR\nEnd: YVR Airport</string>
+    <string name="app_name">ridAR</string>
+    <string name="textview_routecoordinates_2waypoints">Press "Get Directions" button to calculate a route</string>
+
 </resources>

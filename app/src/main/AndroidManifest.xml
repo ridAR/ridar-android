@@ -7,12 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
-    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-
+    <uses-permission android:name="android.permission.BLUETOOTH" />
 
     <application
         android:allowBackup="true"
@@ -21,16 +17,24 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="com.techgeekme.ridar.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="53AGtlqF7HGKvlKO13Ch" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="Xl1pJ9ZHA5nJUWOi9EE6iQ" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="ku74UvTugp2sU3f3khRM7mJ5YEczDxdiADIO2E2UreztU6aiKZ16yzDPNP7n/OjNTQTPOoqAmvzozr0AtCxBU51kySvl6q/tMOD00xF21cDTE7i36CfzEbwzbgU1H0AzYhNNwNXV/xGBYVBb1M0sdjTfzceqo2TlIBDrMx+kBoJHnXE9ne4hAsxwIMODgrpHp9+XNxGcHRY55VBLoo0NzwQ2HXem91t+Hg3HvTFak4rL9g/cHmUOQIkZn2F6DuFmRcmlcwRiTVAERrqQodXQQzxYlllFGBgmcTJVgow3HflmSbeakEbj3SvV8KcmndCQ8DwhMYjROck6FB9qoD2OOQRnkxn//9cn/nAnekV7uEw/SU4pYG2EwIIJ5k6KfOSwZCj5jYFi6hXJyWMhwctfS4F+oJ8n7aSBQDbscsdB3YhBjgr4mkrJXYmfIR1qEYunQPZhQdWOZtshks5NOIKhV+KRGnRDWkF+zo0Cgix3/afgHTqHNDT2cpQFNjVqsc3HrZT1d/u+TS9DVBaIcyc1pfuDq6JFYVFLqeWTdDGAdZPVKLFWnda5w9D+UtwFh45bAVpMpjsDSaBUoG5PcpFwMRLu0rJP+7eJL1AXb5xCqB/NttDlxeIoAPUOTyi2esTYz8o5HKYWCPWGrs/Z8qvJAOjt2HnGfMw6g9Ddz/g0kdE=" />
+
         <service
             android:name="com.here.android.mpa.service.MapService"
             android:exported="true"
@@ -41,16 +45,7 @@
             </intent-filter>
         </service>
 
-
-        <meta-data
-            android:name="com.here.android.maps.appid"
-            android:value="XOXMFl7BYXxXmasM1Hhx" />
-        <meta-data
-            android:name="com.here.android.maps.apptoken"
-            android:value="sK27jaiAPbBq6U67IyncfA" />
-        <meta-data
-            android:name="com.here.android.maps.license.key"
-            android:value="O8BcBUU+oeMbiGreNHzSmyyZSewJmIjNNMifafSWWvBxfo2EEsseeYIQH5ZU/cBdiYEzltmF9RHf6ZMz4aox9qP8pg/ed+eVoFZHuIk6VQrL6PH9uqekDOaNNgpa8FbJTBv9L+5LyN0m+Tigywn9qRZt/zH9UWTfm2dk5lIGs+uF0EyfXFScTmBAjrDRATKd6YnfH2nV4NH1sRKWFeJaWXrriprKzfhP4xfr5lbKEbv9vF5Fo9nUm2r/shOwokag5q2RVx60f+d1FpSPiz8XuQmjm/vY9x24KTw8DUAd1qHRIWcXA05hJs0WljyNsvVtgsfMppbmA0RmeeAZVxUC5D8SZZRKuZa2BcRDqOJ6fwm9inRCHyNYgY89NBQeoLXMc+/Ih/cT7UsSlUQMHZM+eCwWYDvnd4Pl92n7Mg7/G5a4SC3JhsXCpa20ru6yx3bXUmefO2BSrtyzyiFpBcqfl+r7Z2heae44dD6WCcFa0XluIn6rNg/N5F+w2x3ZMT5jrZDaw6j5yywJZFpAZ5WpKXC2MOTx4llE9c4ciZvC9erNOJJ+hTnyAQdQLtN/wFPzmR1sBfrsXZEoV1bkyrS22UeCENWKNJ/X2GYbPi/CskQmzwUrj2RDgDoH0gSxj7QaF1ROEuZMV4eHfkCWHEyhMdE2F0C9HOiTGDCjco4Rd40=" />
+        <activity android:name=".NavActivity"></activity>
     </application>
 
 </manifest>
